@@ -1,14 +1,20 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useRef, useState } from 'react'
 import './Video.css'
 import video from '../assets/video1.mp4'
+import VideoFooter from './components/footer/VideoFooter'
+import VideoSidebar from './components/sidebar/VideoSidebar'
 
-function Video() {
+function Video({ likes, messages, shares, name, description, music }) {
   const [play, setPlay] = useState(false)
   const videoRef = useRef(null)
 
   function handleStart() {
-    if (play) {
+    if (!play) {
+      8
       videoRef.current.play()
+      videoRef.current.volume = 0.05
+
       setPlay(!play)
     } else {
       videoRef.current.pause()
@@ -26,6 +32,16 @@ function Video() {
         src={video}
       >
       </video>
+      <VideoSidebar
+        likes={likes}
+        messages={messages}
+        shares={shares}
+      />
+      <VideoFooter
+        name={name}
+        description={description}
+        music={music}
+      />
     </div>
   )
 }
