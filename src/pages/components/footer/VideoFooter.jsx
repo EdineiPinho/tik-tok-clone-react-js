@@ -4,11 +4,12 @@ import React from 'react'
 import disco from '../../../assets/disco.png'
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 
+// eslint-disable-next-line react/prop-types
 function VideoFooter({ name, description, music }) {
   return (
     <div className='videoFooter'>
       <div className='videoFooter__text'>
-        <h3>@{name}</h3>
+        <h3 className='videoFooter__name'>@{name}</h3>
         <p>{description}</p>
         <div className='videoFooter__music'>
           <MusicNoteIcon className='videoFooter__icon' />

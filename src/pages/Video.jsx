@@ -14,7 +14,6 @@ function Video({ likes, messages, shares, name, description, music, url }) {
       8
       videoRef.current.play()
       videoRef.current.volume = 0.05
-
       setPlay(!play)
     } else {
       videoRef.current.pause()

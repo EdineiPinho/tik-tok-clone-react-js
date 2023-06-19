@@ -15,11 +15,16 @@
 
 .videoFooter__music {
   display: flex;
+  cursor: pointer;
 }
 
 .videoFooterMusic__text {
   width: 78%;
   overflow-x: hidden;
+}
+
+.videoFooter__name {
+  cursor: pointer;
 }
 
 .videoFooterMusic__text p {
@@ -59,4 +64,12 @@
   }
 }
 
-/* background: pink; */
+@media only screen and (max-width: 440px) {
+  .videoFooter {
+    bottom: 22%;
+  }
+
+  .videoFooterMusic__text {
+    width: 78%;
+  }
+}

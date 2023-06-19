@@ -8,5 +8,11 @@
 .videoSidebar__options {
   padding: 20px;
   text-align: center;
+  cursor: pointer;
+}
 
+@media only screen and (max-width: 440px) {
+  .videoSidebar {
+    top: 46%;
+  }
 }
