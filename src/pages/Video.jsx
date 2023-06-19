@@ -1,13 +1,13 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import './Video.css'
-import video from '../assets/video1.mp4'
 import VideoFooter from './components/footer/VideoFooter'
 import VideoSidebar from './components/sidebar/VideoSidebar'
 
-function Video({ likes, messages, shares, name, description, music }) {
-  const [play, setPlay] = useState(false)
-  const videoRef = useRef(null)
+// eslint-disable-next-line react/prop-types
+function Video({ likes, messages, shares, name, description, music, url }) {
+  const [play, setPlay] = React.useState(false)
+  const videoRef = React.useRef(null)
 
   function handleStart() {
     if (!play) {
@@ -29,7 +29,8 @@ function Video({ likes, messages, shares, name, description, music }) {
         ref={videoRef}
         onClick={handleStart}
         loop
-        src={video}
+        src={url}
+        type="video/mp4"
       >
       </video>
       <VideoSidebar
